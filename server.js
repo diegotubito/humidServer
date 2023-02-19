@@ -1,8 +1,14 @@
 const express = require('express')
 const app = express()
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
+app.get('/user/list', function (req, res) {
+
+    const mockUsers = {
+        name: 'Diego',
+        age: 45
+    }
+
+  res.json(mockUsers)
 })
 
 app.listen(3000, () => {
